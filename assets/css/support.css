@@ -1,0 +1,108 @@
+body {
+    background-image: url("../../assets/images/wallpaper.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    border-bottom: 2px solid white;
+    width: 40%;
+    font-size: 40px;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    margin: auto;
+    transition: 0.3s;
+}
+
+h2:hover {
+    width: 30%;
+}
+
+.form1 {
+    margin: auto;
+    background-color: #2b2f32;
+    width: 20%;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 8%;
+    padding: 4%;
+    border-radius: 15px;
+    transition: 0.1s;
+}
+
+p a {
+    color: black;
+    transition: 0.3s;
+}
+
+p a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+p a:hover {
+    color: white;
+}
+
+
+.form1:hover {
+    box-shadow: 1px 1px 5px 5px rgb(49, 143, 160);
+}
+
+label {
+    text-align: center;
+    margin-bottom: 8px;
+    color: white;
+    transition: 0.3s;
+}
+
+label:hover {
+    color: black;
+}
+
+input {
+    display: flex;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 25px;
+    transition: 0.3s;
+    border-radius: 5px;
+    background: transparent;
+}
+
+input:hover {
+    border: 2px solid rgb(74, 128, 228);
+    background-color: rgb(49, 143, 160);
+}
+
+input[type="submit"] {
+    background: #2b2f32;
+    margin-top: 12%;
+    border-radius: 0;
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background: rgb(49, 143, 160);
+    border: 1px solid white;
+    border-radius: 8px;
+    color: black;
+}
+
+textarea {
+    width: 310px;
+    height: 300px;
+    resize: none;
+    margin-top: 20px;
+    background: transparent;
+    color: black;
+    font-size: 25px;
+}
+
+textarea:hover {
+    border: 2px solid rgb(74, 128, 228);
+    background-color: rgb(49, 143, 160);
+}
