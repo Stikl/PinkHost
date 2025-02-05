@@ -2,6 +2,7 @@ body {
     background-image: url("../../assets/images/wallpaper.jpg");
     background-position: center;
     background-size: cover;
+    transform: scale(0.8);
 }
 
 h2 {
