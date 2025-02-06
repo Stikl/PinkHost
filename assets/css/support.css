@@ -2,44 +2,44 @@ body {
     background-image: url("../../assets/images/wallpaper.jpg");
     background-position: center;
     background-size: cover;
-    transform: scale(0.8);
+    margin: 0; /* Elimina el margen predeterminado del body */
 }
 
 h2 {
     text-align: center;
     color: white;
     border-bottom: 2px solid white;
-    width: 40%;
-    font-size: 40px;
-    padding-bottom: 30px;
-    padding-top: 10px;
-    margin: auto;
+    width: 80%; /* Ancho relativo */
+    max-width: 600px; /* Ancho máximo */
+    font-size: 2em; /* Tamaño de fuente relativo */
+    padding: 1em 0; /* Padding vertical */
+    margin: 0 auto; /* Centrar horizontalmente */
     transition: 0.3s;
 }
 
 h2:hover {
-    width: 30%;
+    width: 70%;
 }
 
 .form1 {
-    margin: auto;
+    margin: 2% auto; /* Márgenes relativos */
     background-color: #2b2f32;
-    width: 20%;
+    width: 80%; /* Ancho relativo */
+    max-width: 400px; /* Ancho máximo */
     text-align: center;
-    font-size: 30px;
-    margin-top: 8%;
+    font-size: 1.2em; /* Tamaño de fuente relativo */
     padding: 4%;
     border-radius: 15px;
-    transition: 0.1s;
+    transition: 0.1s; /* Transición más rápida */
+}
+
+.form1:hover {
+    box-shadow: 1px 1px 5px 5px rgb(49, 143, 160);
 }
 
 p a {
     color: black;
-    transition: 0.3s;
-}
-
-p a {
-    text-decoration: none;
+    text-decoration: none; /* Combina las dos reglas p a en una */
     transition: 0.3s;
 }
 
@@ -47,13 +47,9 @@ p a:hover {
     color: white;
 }
 
-
-.form1:hover {
-    box-shadow: 1px 1px 5px 5px rgb(49, 143, 160);
-}
-
 label {
-    text-align: center;
+    display: block; /* Ocupa todo el ancho */
+    text-align: left;
     margin-bottom: 8px;
     color: white;
     transition: 0.3s;
@@ -63,47 +59,108 @@ label:hover {
     color: black;
 }
 
-input {
-    display: flex;
-    margin: auto;
-    text-align: center;
+input[type="text"],
+input[type="email"],
+input[type="password"] {  /* Estilos unificados para inputs */
+    width: calc(100% - 16px); /* Ancho completo menos el padding */
+    padding: 8px;
     margin-bottom: 8px;
-    font-size: 25px;
+    font-size: 1em;
     transition: 0.3s;
     border-radius: 5px;
     background: transparent;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Incluye padding y border en el ancho */
 }
 
-input:hover {
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover {
     border: 2px solid rgb(74, 128, 228);
     background-color: rgb(49, 143, 160);
 }
 
 input[type="submit"] {
     background: #2b2f32;
-    margin-top: 12%;
-    border-radius: 0;
+    margin-top: 2%; /* Margen relativo */
+    width: 100%;
+    border-radius: 8px;
     color: white;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    box-sizing: border-box; /* Añadido para consistencia */
 }
 
 input[type="submit"]:hover {
     background: rgb(49, 143, 160);
-    border: 1px solid white;
-    border-radius: 8px;
     color: black;
 }
 
 textarea {
-    width: 310px;
-    height: 300px;
-    resize: none;
-    margin-top: 20px;
+    width: calc(100% - 16px); /* Ancho relativo */
+    height: 150px; /* Altura ajustable.  300px es mucho por defecto */
+    resize: vertical; /* Permite redimensionar verticalmente */
+    margin-top: 1%; /* Margen relativo */
+    padding: 8px;
     background: transparent;
-    color: black;
-    font-size: 25px;
+    color: white; /* Texto blanco para contraste con fondo oscuro */
+    font-size: 1em;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    transition: 0.3s; /* Transición suave */
+    border-radius: 5px;
 }
 
 textarea:hover {
     border: 2px solid rgb(74, 128, 228);
     background-color: rgb(49, 143, 160);
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.5em;
+        width: 90%;
+    }
+
+    .form1 {
+        width: 90%;
+        font-size: 1em;
+        padding: 5%;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    textarea {
+        font-size: 0.9em;
+    }
+
+    input[type="submit"] {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .form1 {
+        font-size: 0.9em;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    textarea {
+        font-size: 0.8em;
+    }
+
+    input[type="submit"] {
+        font-size: 0.8em;
+    }
 }
